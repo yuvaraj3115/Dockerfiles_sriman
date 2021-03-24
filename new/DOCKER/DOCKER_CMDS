@@ -1,0 +1,16 @@
+DOCKER PUSH
+docker tag firstimage:1.0 YOUR_DOCKERHUB_NAME/firstimage:1.0
+docker push YOUR_DOCKERHUB_NAME/firstimage
+docker push yuvarajnbkr2015/dockerhandson/maven-web-app:latest
+
+..........................................................................
+
+
+docker tag mylocalimage:latest sirimalla/dockerhub:myfirstimagepush
+
+docker push sirimalla/dockerhub:myfirstimagepush
+
+docker kill $(docker ps -q)  ....stop all containers
+docker rm $(docker ps -a -q)  ....remove all exited containers 
+docker rmi $(docker images -q)  ....remove all images
+docker container attach <containerid>

@@ -1,0 +1,27 @@
+CONFIGMAP: https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/
+
+kubectl get storageclass
+kubectl get pv
+kubectl get pvc
+
+
+NOTE: we need to create two 1)ingress resouce  (rules to traffic from external to inside)      
+2)ingress controller (it is nothing but pod or nothing but internal load balancer)
+
+ingress: kubernetes ingress is a resource to add rules for routing traffic from external sources
+         to the services in the kubernetes cluster
+Layer4: network(TCP) L.B routing is based on port
+Layer7: Application(HTTP,HTTPS) load balancer.here we can define path based or host based routing rules.
+        ex: http://javawebapp.example.com
+            http://javawebapp.example.com/java-web-app.
+
+
+request---->loadbalancer----->ingresscontroller-pod(will use ingress rules)----->services---->pods--->container.
+
+
+https://github.com/nginxinc/kubernetes-ingress/tree/master/deployments
+
+
+
+SERVICEACCOUNT:
+note: nginx pods requires permissions to read kubernetes objects like services,...

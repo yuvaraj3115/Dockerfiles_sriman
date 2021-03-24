@@ -1,0 +1,15 @@
+FROM ubuntu:18.04
+ARG site
+RUN apt update
+RUN apt-get install openjdk-8-jdk -y
+WORKDIR /opt/
+ADD https://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.44/bin/apache-tomcat-9.0.44.tar.gz ./
+RUN gunzip apache-tomcat-9.0.44.tar.gz
+RUN tar -xvf apache-tomcat-9.0.44.tar
+RUN rm -rf apache-tomcat-9.0.44.tar
+COPY ./${site}.war /opt/apache-tomcat-9.0.44/webapps/
+RUN chmod 777 /opt/apache-tomcat-9.0.44/webapps/${site}.war
+COPY tomcat.sh /usr/local/bin/
+RUN chmod 777 /usr/local/bin/tomcat.sh
+ENTRYPOINT ["tomcat.sh"]
+CMD ["tail -f /dev/null"]
