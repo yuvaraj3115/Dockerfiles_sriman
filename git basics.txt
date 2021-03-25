@@ -1,0 +1,30 @@
+sudo apt-get install git
+git config -–global user.name “your_username
+git config -–global user.email “your_emailid”
+git init .
+git remote add origin  https://github.com/your_username/myproject.git
+git add helloworld.c
+git add .
+git commit --m ‘your_message’ <filename>
+git log --oneline -1 .......it givescommit id
+git push --force origin master
+git commit -m ‘your_message’ git push origin master
+git clone https://github.com/your_username/myproject.git
+git pull origin master  ..............(it will pull the latest changes only)
+git log ..........commits history
+git branch <branchname>
+gitk ........shows graphical history
+git show .......display particular commit info
+git grep <search string> ......serching for version of project
+
+sudheer company git-steps:
+
+1) git clone -b <develope_192> <git url> ...........
+2) cd <project folder structure>
+3) git checkout -b <QUA-2131>  ............create feature branch and switch
+4) git status
+5) git add .
+6) git commit --m "<QUA-2131> is fixed" .........(m=message)
+7) git push --force origin <QUA-2131>
+
+   git checkout <branchname> ........switch that branch
