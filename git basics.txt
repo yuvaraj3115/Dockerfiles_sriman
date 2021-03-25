@@ -1,14 +1,14 @@
 sudo apt-get install git
-git config -–global user.name “your_username
-git config -–global user.email “your_emailid”
+git config -â€“global user.name â€œyour_username
+git config -â€“global user.email â€œyour_emailidâ€
 git init .
 git remote add origin  https://github.com/your_username/myproject.git
 git add helloworld.c
 git add .
-git commit --m ‘your_message’ <filename>
+git commit --m â€˜your_messageâ€™ <filename>
 git log --oneline -1 .......it givescommit id
 git push --force origin master
-git commit -m ‘your_message’ git push origin master
+git commit -m â€˜your_messageâ€™ git push origin master
 git clone https://github.com/your_username/myproject.git
 git pull origin master  ..............(it will pull the latest changes only)
 git log ..........commits history
@@ -28,3 +28,4 @@ sudheer company git-steps:
 7) git push --force origin <QUA-2131>
 
    git checkout <branchname> ........switch that branch
+   ................................
