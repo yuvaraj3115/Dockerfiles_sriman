@@ -16,7 +16,7 @@ git branch <branchname>
 gitk ........shows graphical history
 git show .......display particular commit info
 git grep <search string> ......serching for version of project
-
+git remote set-url origin <url>
 sudheer company git-steps:
 
 1) git clone -b <develope_192> <git url> ...........
